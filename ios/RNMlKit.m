@@ -112,7 +112,6 @@ RCT_REMAP_METHOD(deviceTextRecognition, deviceTextRecognition:(NSString *)imageP
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         FIRVision *vision = [FIRVision vision];
-        FIRVisionCloudTextRecognizerOptions *
         FIRVisionTextRecognizer *textRecognizer = [vision onDeviceTextRecognizer];
         NSDictionary *d = [[NSDictionary alloc] init];
         NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imagePath]];
